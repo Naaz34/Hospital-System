@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+    <style>
+        /* CSS for Navbar */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Background color */
+            color: #333; /* Text color */
+        }
+
+        .navbar {
+            background-color: #333; /* Navbar background color */
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd; /* Hover background color */
+            color: black;
+        }
+
+        /* Main content */
+        .container {
+            padding: 20px;
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-around; /* Space around items */
+            flex-wrap: wrap; /* Allow items to wrap */
+        }
+
+        /* Doctor card */
+        .doctor-card {
+            background-color: #fff; /* Card background color */
+            border-radius: 10px; /* Card border radius */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+            padding: 20px;
+            width: 30%; /* Card width */
+            margin-bottom: 20px; /* Space between cards */
+        }
+
+        /* Doctor image */
+        .doctor-img {
+            width: 50%; /* Image width */
+            border-radius: 10px; /* Image border radius */
+            margin-bottom: 10px; /* Space between image and text */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        /* Doctor history */
+        .doctor-history {
+            color: #666; /* History text color */
+            text-align: center; /* Center align the history */
+            display: none; /* Hide the history by default */
+        }
+    </style>
+</head>
+<body>
+
+
+
+<!-- Main content -->
+<div class="container">
+    <!-- Doctor 1 -->
+    <div class="doctor-card">
+        <!-- Doctor image -->
+        <div class="doctor-img" onclick="toggleHistory('doctorHistory1')">
+            <img src="shatish.jpg" alt="Doctor 1" style="width: 100%; border-radius: 10px;">
+        </div>
+        <!-- Doctor details -->
+        <h2>Dr.shatish</h2>
+        <!-- Doctor history -->
+        <p class="doctor-history" id="doctorHistory1">
+            Dr.shatish is a highly experienced doctor specializing in internal medicine.
+            With over 10years of practice, he has treated numerous patients and earned a reputation for excellence.
+            He is dedicated to providing compassionate care and improving the health and well-being of his patients.
+        </p>
+    </div>
+    <br><br>
+
+    <!-- Doctor 2 -->
+    <div class="doctor-card">
+        <!-- Doctor image -->
+        <div class="doctor-img" onclick="toggleHistory('doctorHistory2')">
+            <img src="naaz.jpg" alt="Doctor 2" style="width: 100%; border-radius: 10px;">
+        </div>
+        <!-- Doctor details -->
+        <h2>Dr.Naaz</h2>
+        <!-- Doctor history -->
+        <p class="doctor-history" id="doctorHistory2">
+            Dr. Naaz is a skilled surgeon with a passion for helping patients achieve optimal health.
+            She is known for her expertise in minimally invasive procedures and her commitment to patient care.
+            Dr.Naaz believes in a personalized approach to medicine and strives to build strong relationships with her patients.
+        </p>
+    </div>
+
+    <!-- Doctor 3 -->
+    <div class="doctor-card">
+        <!-- Doctor image -->
+        <div class="doctor-img" onclick="toggleHistory('doctorHistory3')">
+            <img src="addi.jpg" alt="Doctor 3" style="width: 100%; border-radius: 10px;">
+        </div>
+        <!-- Doctor details -->
+        <h2>Dr.Addi</h2>
+        <!-- Doctor history -->
+        <p class="doctor-history" id="doctorHistory3">
+            Dr.Adii is a dedicated family physician who believes in providing comprehensive care to patients of all ages.
+            He has a special interest in preventive medicine and enjoys working with families to promote healthy lifestyles.
+            Dr. Addi values open communication and strives to empower his patients to take control of their health.
+        </p>
+    </div>
+</div>
+
+<script>
+    // JavaScript function to toggle doctor's history visibility
+    function toggleHistory(historyId) {
+        var history = document.getElementById(historyId);
+        if (history.style.display === "none") {
+            history.style.display = "block";
+        } else {
+            history.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
